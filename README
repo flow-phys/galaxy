@@ -1,0 +1,14 @@
+File:   README
+
+Author: Britton J. Olson (bolson)
+        CME-212, Sp-2010
+        Final Exam
+
+Resources used:  
+	  -James Demmel, Fast Hierarchical Methods for the N-body Problem, Part 1, 
+	 	CS267, Lecture 24 at Berkeley in 1996.
+	  -Josh Barnes & Piet Hut, A hierarchical O(N log N) force-calculation 
+	  	algorithm, Nature, 324(4), December, 1986.
+	  -John Dubinski, Galaxy Dynamics, The Barnes-Hut Tree Code.
+	  	http://www.cita.utoronto.ca/~dubinski/treecode/node3.html
+	  -Online BLAS man page: http://www.netlib.org/blas/

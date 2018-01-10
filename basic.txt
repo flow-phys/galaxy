@@ -1,0 +1,15 @@
+File:  basic.txt
+Description:  Brief description of methods used to impliment the N-body 
+	      simulation for the basic task
+Author: Britton J. Olson
+Date: June 2, 2010
+
+
+Methods:  The initial program was written "naivly" which consisted of all force computations been done descretly 
+inside of the inner-most loop.  For each body, the forces were then used to integrate forwards in time.  After profiling
+this code, most of the work was being done within the inner most loop but it was evenly distibuted over several lines of code.
+The next code I tried, attempted to utilize the fortran vector operations.  This sped many operations up but then seemed to
+be a large bottle neck when dividing by a vector. (more so then a loop of scalars) So I hybridized the 2 methods using an inner 
+loop for the division algebra ( 1/r ) and vector operations for the remainder.  For the sum, I used the BLAS routine SDOT for a dot
+product rather then the fortran instrinsic "SUM" or an inner loop.  The BLAS was faster then both and decreased run time by %10
+or so.  Also, I used the BLAS level 1 routine SAXPY for the temporal integration.  This also save time but only a few %.  
